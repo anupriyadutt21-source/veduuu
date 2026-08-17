@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +7,8 @@
 
     <title>Happy Birthday Veduuu ❤️</title>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- IMPORTANT: Match your actual filename -->
+    <link rel="stylesheet" href="Style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,21 +18,30 @@
 
 <body>
 
-    <!-- =========================================
-         YOUTUBE MUSIC PLAYER
-         ========================================= -->
+    <!-- ==========================================
+         YOUTUBE MUSIC
+         ========================================== -->
 
-    <div id="youtube-player"></div>
+    <!--
+    PUT YOUR YOUTUBE VIDEO ID BELOW.
 
-    <button id="musicButton" onclick="toggleMusic()">
-        🎵 Start Birthday Song
+    Example YouTube link:
+    https://www.youtube.com/watch?v=ABC123XYZ
+
+    The ID is:
+    ABC123XYZ
+    -->
+
+    <div id="youtubePlayer"></div>
+
+    <button id="musicButton" type="button">
+        🎵 Play Birthday Song
     </button>
 
 
     <!-- FLOATING HEARTS -->
 
     <div class="hearts">
-
         <span>♡</span>
         <span>♥</span>
         <span>♡</span>
@@ -43,7 +52,6 @@
         <span>♥</span>
         <span>♡</span>
         <span>♥</span>
-
     </div>
 
 
@@ -55,47 +63,39 @@
             🌷
         </div>
 
-
         <div class="hero-box">
 
             <p class="small-title">
                 A little birthday surprise for
             </p>
 
-
             <h1>
                 Veduuu
             </h1>
-
 
             <div class="heart-line">
                 ♡ ✦ ♡
             </div>
 
-
             <p class="birthday-text">
                 Happy Birthday, birthday boy 🎂
             </p>
 
-
-            <button onclick="openLetter()">
+            <button onclick="openLetter()" type="button">
                 Open Your Letter 💌
             </button>
 
-
             <p class="music-note">
-                🎵 Tap the music button to start your birthday song
+                🎵 Tap the music button to play your birthday song
             </p>
 
         </div>
-
 
         <div class="flower flower-right">
             🌷
         </div>
 
     </section>
-
 
 
     <!-- MEMORIES -->
@@ -106,11 +106,9 @@
             OUR LITTLE MEMORIES
         </p>
 
-
         <h2>
             Moments I Want To Keep 🤍
         </h2>
-
 
         <p class="memory-description">
             A few little pieces of us that I want to remember forever.
@@ -119,15 +117,12 @@
 
         <div class="polaroids">
 
-
             <!-- PHOTO 1 -->
-
             <div class="polaroid rotate-left">
 
                 <img
                     src="Photo1.jpg.png"
                     alt="Our memory 1"
-                    onerror="this.alt='Photo 1 could not be loaded';"
                 >
 
                 <p>
@@ -138,13 +133,11 @@
 
 
             <!-- PHOTO 2 -->
-
             <div class="polaroid rotate-right">
 
                 <img
                     src="Photo2.jpg.png"
                     alt="Our memory 2"
-                    onerror="this.alt='Photo 2 could not be loaded';"
                 >
 
                 <p>
@@ -155,13 +148,11 @@
 
 
             <!-- PHOTO 3 -->
-
             <div class="polaroid rotate-left">
 
                 <img
                     src="Photo3.jpg.png"
                     alt="Our memory 3"
-                    onerror="this.alt='Photo 3 could not be loaded';"
                 >
 
                 <p>
@@ -172,13 +163,11 @@
 
 
             <!-- PHOTO 4 -->
-
             <div class="polaroid rotate-right">
 
                 <img
                     src="Photo4.jpg.png"
                     alt="Our memory 4"
-                    onerror="this.alt='Photo 4 could not be loaded';"
                 >
 
                 <p>
@@ -189,13 +178,11 @@
 
 
             <!-- PHOTO 5 -->
-
             <div class="polaroid rotate-left">
 
                 <img
                     src="Photo5.jpg.png"
                     alt="Our memory 5"
-                    onerror="this.alt='Photo 5 could not be loaded';"
                 >
 
                 <p>
@@ -206,13 +193,11 @@
 
 
             <!-- PHOTO 6 -->
-
             <div class="polaroid rotate-right">
 
                 <img
                     src="Photo6.jpg.jpeg"
                     alt="Our memory 6"
-                    onerror="this.alt='Photo 6 could not be loaded';"
                 >
 
                 <p>
@@ -226,7 +211,6 @@
     </section>
 
 
-
     <!-- LOVE LETTER -->
 
     <section class="letter" id="letter">
@@ -235,16 +219,13 @@
             🤍 🌹 🤍
         </div>
 
-
         <p class="section-title">
             FROM MY HEART TO YOURS
         </p>
 
-
         <h2>
             To My Veduuu ❤️
         </h2>
-
 
         <div class="letter-paper">
 
@@ -264,11 +245,9 @@
                 I want you to know how much you mean to me—not just today, but every single day.
             </p>
 
-
             <h3>
                 A little poem for you… 🌷
             </h3>
-
 
             <div class="poem">
 
@@ -294,7 +273,6 @@
                 </p>
 
             </div>
-
 
             <p>
                 Veduuu, you became important to me in a way I never expected.
@@ -361,7 +339,6 @@
             <h3>
                 Another little piece for you… 🥹❤️
             </h3>
-
 
             <div class="poem">
 
@@ -477,7 +454,6 @@
             <h3>
                 For the boy whose birthday it is… 🎂
             </h3>
-
 
             <div class="poem">
 
@@ -597,7 +573,6 @@
             <h3>
                 One last poem, just for you… 🌷🤍
             </h3>
-
 
             <div class="poem">
 
@@ -767,7 +742,6 @@
     </section>
 
 
-
     <!-- ENDING -->
 
     <section class="ending">
@@ -776,17 +750,14 @@
             🤍 🌹 🤍 🌹 🤍
         </div>
 
-
         <h2>
             Happy Birthday, Veduuu ❤️
         </h2>
-
 
         <p>
             May this year bring you beautiful memories,
             happiness, success and countless reasons to smile.
         </p>
-
 
         <div class="tulips-bottom">
             🌷 🌷 🌷
@@ -795,105 +766,11 @@
     </section>
 
 
-
-    <!-- =========================================
-         YOUTUBE API
-         ========================================= -->
-
+    <!-- YOUTUBE API -->
     <script src="https://www.youtube.com/iframe_api"></script>
 
-    <script>
-
-        /*
-         * PUT YOUR YOUTUBE VIDEO ID HERE
-         *
-         * Example:
-         * https://www.youtube.com/watch?v=dQw4w9WgXcQ
-         *
-         * Video ID = dQw4w9WgXcQ
-         */
-
-        const YOUTUBE_VIDEO_ID = "YOUR_YOUTUBE_VIDEO_ID";
-
-        let player;
-        let musicPlaying = false;
-
-
-        // YouTube creates the player after the API loads
-        function onYouTubeIframeAPIReady() {
-
-            player = new YT.Player("youtube-player", {
-
-                height: "0",
-                width: "0",
-
-                videoId: YOUTUBE_VIDEO_ID,
-
-                playerVars: {
-                    autoplay: 0,
-                    controls: 0,
-                    loop: 1,
-                    playlist: YOUTUBE_VIDEO_ID
-                },
-
-                events: {
-                    onReady: function () {
-                        console.log("YouTube player ready");
-                    }
-                }
-
-            });
-
-        }
-
-
-        // Music button
-        function toggleMusic() {
-
-            if (!player) {
-                alert("Please wait a moment for the music player to load ❤️");
-                return;
-            }
-
-
-            if (musicPlaying) {
-
-                player.pauseVideo();
-
-                musicPlaying = false;
-
-                document.getElementById("musicButton").innerHTML =
-                    "🎵 Start Birthday Song";
-
-            } else {
-
-                player.playVideo();
-
-                musicPlaying = true;
-
-                document.getElementById("musicButton").innerHTML =
-                    "🔇 Pause Birthday Song";
-
-            }
-
-        }
-
-
-        // Open letter
-        function openLetter() {
-
-            const letter = document.getElementById("letter");
-
-            letter.scrollIntoView({
-                behavior: "smooth"
-            });
-
-        }
-
-    </script>
-
+    <!-- IMPORTANT: Match your actual filename -->
+    <script src="Script.js"></script>
 
 </body>
-
 </html>
-```
