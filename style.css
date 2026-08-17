@@ -15,9 +15,11 @@ body {
 }
 
 
-/* MUSIC PLAYER */
+/* ==========================================
+   YOUTUBE MUSIC PLAYER
+   ========================================== */
 
-#youtube-player {
+#youtubePlayer {
     position: fixed;
     width: 1px;
     height: 1px;
@@ -28,7 +30,42 @@ body {
 }
 
 
-/* FLOATING HEARTS */
+/* MUSIC BUTTON */
+
+#musicButton {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+
+    border: none;
+    border-radius: 30px;
+
+    padding: 12px 20px;
+
+    background: #ff8fba;
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.35);
+
+    transition: 0.3s;
+}
+
+#musicButton:hover {
+    transform: translateY(-3px);
+    background: #ff6fa8;
+}
+
+
+/* ==========================================
+   FLOATING HEARTS
+   ========================================== */
 
 .hearts span {
     position: fixed;
@@ -37,6 +74,7 @@ body {
     opacity: 0.4;
     pointer-events: none;
     z-index: 10;
+
     animation: falling 10s linear infinite;
 }
 
@@ -102,163 +140,233 @@ body {
 }
 
 
-/* HERO */
+/* ==========================================
+   HERO
+   ========================================== */
 
 .hero {
     min-height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     position: relative;
+
     padding: 30px;
 }
 
 .hero-box {
     width: 90%;
     max-width: 700px;
+
     text-align: center;
+
     padding: 70px 30px;
+
     border-radius: 35px;
+
     background: rgba(255, 105, 180, 0.08);
+
     border: 1px solid rgba(255,255,255,0.2);
+
     box-shadow: 0 30px 90px rgba(0,0,0,0.5);
+
     backdrop-filter: blur(12px);
 }
 
 .small-title {
     text-transform: uppercase;
+
     letter-spacing: 4px;
+
     color: #ffc4da;
+
     font-size: 12px;
 }
 
 .hero h1 {
     font-family: "Great Vibes", cursive;
+
     font-size: 110px;
+
     font-weight: normal;
+
     color: #ffb7d1;
+
     margin: 5px 0;
+
     text-shadow: 0 0 30px rgba(255,105,180,0.5);
 }
 
 .heart-line {
     color: #ffd2e2;
+
     font-size: 25px;
+
     margin: 15px;
 }
 
 .birthday-text {
     font-family: "Cormorant Garamond", serif;
+
     font-size: 28px;
 }
 
-.hero button {
+.hero button:not(#musicButton) {
     border: none;
+
     border-radius: 30px;
+
     padding: 15px 28px;
+
     background: #ff8fba;
+
     color: white;
+
     font-weight: bold;
+
     cursor: pointer;
+
     font-size: 15px;
+
     box-shadow: 0 10px 30px rgba(255,105,180,0.3);
+
     transition: 0.3s;
 }
 
-.hero button:hover {
+.hero button:not(#musicButton):hover {
     transform: translateY(-4px);
+
     background: #ff6fa8;
 }
 
 .music-note {
     color: #d7aebb;
+
     font-size: 13px;
+
     margin-top: 20px;
 }
 
 .flower {
     position: absolute;
+
     font-size: 100px;
 }
 
 .flower-left {
     left: 7%;
+
     bottom: 12%;
+
     transform: rotate(-12deg);
 }
 
 .flower-right {
     right: 7%;
+
     top: 14%;
+
     transform: rotate(12deg);
 }
 
 
-/* MEMORIES */
+/* ==========================================
+   MEMORIES
+   ========================================== */
 
 .memories {
     padding: 100px 7%;
+
     background: linear-gradient(#120b12, #1d0d18);
 }
 
 .section-title {
     text-align: center;
+
     text-transform: uppercase;
+
     letter-spacing: 4px;
+
     color: #ffc4da;
+
     font-size: 12px;
 }
 
 .memories h2,
 .letter h2 {
     text-align: center;
+
     font-family: "Great Vibes", cursive;
+
     font-size: 58px;
+
     font-weight: normal;
+
     color: #ffd0df;
+
     margin: 10px 0;
 }
 
 .memory-description {
     text-align: center;
+
     color: #c9adb8;
 }
 
 
-/* POLAROIDS */
+/* ==========================================
+   POLAROIDS
+   ========================================== */
 
 .polaroids {
     max-width: 1050px;
+
     margin: 60px auto;
+
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 45px 30px;
 }
 
 .polaroid {
     background: #fff;
+
     color: #3a2730;
+
     padding: 12px 12px 28px;
+
     box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+
     transition: 0.3s;
 }
 
 .polaroid:hover {
     transform: rotate(0deg) translateY(-10px) scale(1.04);
+
     z-index: 5;
 }
 
 .polaroid img {
     width: 100%;
+
     aspect-ratio: 1 / 1;
+
     object-fit: cover;
+
     display: block;
 }
 
 .polaroid p {
     font-family: "Great Vibes", cursive;
+
     text-align: center;
+
     font-size: 23px;
+
     margin: 10px 0 0;
 }
 
@@ -271,7 +379,9 @@ body {
 }
 
 
-/* LETTER */
+/* ==========================================
+   LETTER
+   ========================================== */
 
 .letter {
     padding: 110px 20px;
@@ -279,28 +389,43 @@ body {
 
 .white-rose {
     text-align: center;
+
     font-size: 60px;
 }
 
 .letter-paper {
     max-width: 850px;
+
     margin: 45px auto;
+
     padding: 60px;
+
     background: #fffaf7;
+
     color: #49353c;
+
     border-radius: 8px;
+
     box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+
     font-family: "Cormorant Garamond", serif;
+
     font-size: 20px;
+
     line-height: 1.7;
+
     position: relative;
 }
 
 .letter-paper:before {
     content: "";
+
     position: absolute;
+
     inset: 12px;
+
     border: 1px solid #e7bdca;
+
     pointer-events: none;
 }
 
@@ -310,77 +435,108 @@ body {
 
 .letter-paper h3 {
     text-align: center;
+
     font-family: "Great Vibes", cursive;
+
     font-weight: normal;
+
     font-size: 38px;
+
     color: #c45d83;
+
     margin-top: 50px;
 }
 
 .poem {
     text-align: center;
+
     color: #7b4a5b;
+
     font-style: italic;
+
     margin: 25px 0 40px;
 }
 
 .special {
     color: #b14d76;
+
     font-size: 26px;
+
     font-weight: bold;
+
     text-align: center;
 }
 
 .big-love {
     text-align: center;
+
     font-size: 28px;
+
     color: #b14d76;
 }
 
 .quote {
     text-align: center;
+
     font-style: italic;
+
     color: #b14d76;
 }
 
 .signature {
     text-align: center;
+
     font-family: "Great Vibes", cursive;
+
     font-size: 32px;
+
     color: #b14d76;
 }
 
 
-/* END */
+/* ==========================================
+   ENDING
+   ========================================== */
 
 .ending {
     text-align: center;
+
     padding: 110px 20px 140px;
+
     background: linear-gradient(#1d0d18, #0d080d);
 }
 
 .ending h2 {
     font-family: "Great Vibes", cursive;
+
     font-size: 65px;
+
     font-weight: normal;
+
     color: #ffd0df;
 }
 
 .ending p {
     color: #d9bdc8;
+
     max-width: 600px;
+
     margin: auto;
 }
 
 .roses,
 .tulips-bottom {
     font-size: 45px;
+
     letter-spacing: 10px;
+
     margin: 20px;
 }
 
 
-/* MOBILE */
+/* ==========================================
+   MOBILE
+   ========================================== */
 
 @media (max-width: 800px) {
 
@@ -398,11 +554,23 @@ body {
 
     .letter-paper {
         padding: 40px 28px;
+
         font-size: 18px;
     }
+
 }
 
 @media (max-width: 520px) {
+
+    #musicButton {
+        top: 12px;
+
+        right: 12px;
+
+        padding: 10px 15px;
+
+        font-size: 11px;
+    }
 
     .polaroids {
         grid-template-columns: 1fr;
@@ -412,7 +580,16 @@ body {
         font-size: 65px;
     }
 
+    .hero-box {
+        padding: 60px 20px;
+    }
+
+    .flower {
+        display: none;
+    }
+
     .letter-paper {
         padding: 35px 22px;
     }
+
 }

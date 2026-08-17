@@ -1,66 +1,55 @@
-let player;
+// ================================
+// BIRTHDAY MUSIC
+// ================================
+
+const youtubeVideoId = "32YzafO9Bmo";
+
 let musicPlaying = false;
 
-const YOUTUBE_VIDEO_ID = "32YzafO9Bmo";
+const musicButton = document.getElementById("musicButton");
+const youtubePlayer = document.getElementById("youtubePlayer");
 
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player("youtubePlayer", {
-        height: "0",
-        width: "0",
+musicButton.addEventListener("click", function () {
 
-        videoId: YOUTUBE_VIDEO_ID,
+    if (!musicPlaying) {
 
-        playerVars: {
-            autoplay: 0,
-            controls: 0,
-            loop: 1,
-            playlist: YOUTUBE_VIDEO_ID
-        },
-
-        events: {
-            onReady: function () {
-                console.log("YouTube music player is ready ❤️");
-            }
-        }
-    });
-}
-
-
-document.getElementById("musicButton").addEventListener("click", function () {
-
-    if (!player) {
-        alert("Please wait a few seconds and try again ❤️");
-        return;
-    }
-
-    if (musicPlaying) {
-
-        player.pauseVideo();
-
-        musicPlaying = false;
-
-        this.innerHTML = "🎵 Play Birthday Song";
-
-    } else {
-
-        player.playVideo();
+        youtubePlayer.src =
+            "https://www.youtube.com/embed/" +
+            youtubeVideoId +
+            "?autoplay=1&loop=1&playlist=" +
+            youtubeVideoId +
+            "&controls=0&rel=0";
 
         musicPlaying = true;
 
-        this.innerHTML = "🔇 Pause Birthday Song";
+        musicButton.innerHTML = "🔇 Pause Birthday Song";
+
+    } else {
+
+        youtubePlayer.src = "";
+
+        musicPlaying = false;
+
+        musicButton.innerHTML = "🎵 Play Birthday Song";
     }
 
 });
 
+
+// ================================
+// OPEN LOVE LETTER
+// ================================
 
 function openLetter() {
 
     const letter = document.getElementById("letter");
 
     if (letter) {
+
         letter.scrollIntoView({
             behavior: "smooth"
         });
+
     }
 
 }
